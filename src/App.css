@@ -5,4 +5,9 @@
     list-style-type: none;
     text-decoration: none;
 }
-
+.lists:hover{
+    .title{
+        color: #ffd13b;
+        transition: all ease-in-out .3s;
+    }
+}
