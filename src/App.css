@@ -1,13 +1,32 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
 }
-.lists:hover{
-    .title{
-        color: #ffd13b;
-        transition: all ease-in-out .3s;
-    }
+.lists:hover {
+  .title {
+    color: #ffd13b;
+    transition: all ease-in-out 0.3s;
+  }
+}
+.thirdSect {
+  background-image: url("https://livedemo00.template-help.com/wt_prod-25028/lintense-delivery/images/image-03-1900x1000.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.plusDiv {
+  width: 100%;
+  background: linear-gradient(to top, #b4a307, #FFE400);
+  height: 100px;
+  .lintensePlus {
+    font-size: 40px;
+    color: white; 
+    text-shadow: black;
+    font-family: "Clicker Script";
+    font-weight: 400;
+    font-style: normal;
+  }
 }
