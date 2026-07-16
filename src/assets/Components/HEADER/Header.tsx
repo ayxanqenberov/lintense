@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ImArrowRight } from "react-icons/im";
 import "../../../App.css";
 import { CiSearch } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { FaRegUserCircle } from "react-icons/fa";
+import { auth } from "../../../firebase/firebase";
 
 const Header = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <header className="header bg-amber-300 w-full flex justify-center h-[70px]">
       <div className="flex items-center justify-around w-[80%]">
@@ -13,7 +26,7 @@ const Header = () => {
           <span
             className="bg-gradient-to-r logo from-[#030302] via-[#FFD54A] to-[#D4A017] bg-clip-text text-3xl font-extrabold tracking-[-0.04em] text-transparent"
             style={{
-              WebkitTextStroke: "0.5px #d1d5", 
+              WebkitTextStroke: "0.5px #d1d5",
             }}
           >
             Lintense
@@ -28,10 +41,20 @@ const Header = () => {
             <CiSearch />
           </div>
         </div>
-        <button onClick={()=>navigate('/register')} className="flex btn-3 items-center w-[110px] justify-center gap-2 bg-[#FFE400] p-2 rounded-lg transition-all duration-300 ease-in-out transform hover:bg-[#FFD700] text-[15px] hover:scale-105 hover:shadow-lg">
-          Log in
-          <ImArrowRight className="text-[13px] py-[0.5px]" />
-        </button>
+        {user ? (
+          <FaRegUserCircle
+            onClick={() => navigate("/profile")}
+            className="text-4xl cursor-pointer"
+          />
+        ) : (
+          <button
+            onClick={() => navigate("/register")}
+            className="flex btn-3 items-center w-[110px] justify-center gap-2 bg-[#FFE400] p-2 rounded-lg transition-all duration-300 ease-in-out transform hover:bg-[#FFD700] text-[15px] hover:scale-105 hover:shadow-lg"
+          >
+            Log in
+            <ImArrowRight className="text-[13px] py-[0.5px]" />
+          </button>
+        )}
       </div>
     </header>
   );

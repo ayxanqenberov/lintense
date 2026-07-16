@@ -4,20 +4,19 @@ import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../../firebase/firebase";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
+  const navigate = useNavigate();
+
   const googleLogin = async () => {
     const provider = new GoogleAuthProvider();
 
     try {
-      const result = await signInWithPopup(auth, provider);
+      await signInWithPopup(auth, provider);
 
-      const user = result.user;
-
-      console.log("User:", user);
-      console.log("Name:", user.displayName);
-      console.log("Email:", user.email);
+      navigate("/");
     } catch (error) {
-      console.log("Google Login Error:", error.message);
+      console.log(error);
     }
   };
   return (
