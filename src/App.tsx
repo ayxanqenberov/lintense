@@ -19,7 +19,6 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin" element={<AdminRegister />} />
         <Route path="/admin-dashboard" element={<Admin/>} />
-        
       </Routes>
       <UpButton />
     </BrowserRouter>

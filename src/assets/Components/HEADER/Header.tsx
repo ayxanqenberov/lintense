@@ -3,21 +3,21 @@ import { ImArrowRight } from "react-icons/im";
 import "../../../App.css";
 import { CiSearch } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, User } from "firebase/auth";
 import { FaRegUserCircle } from "react-icons/fa";
 import { auth } from "../../../firebase/firebase";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
+  const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
 
-    return () => unsubscribe();
-  }, []);
+  return () => unsubscribe();
+}, []);
 
   return (
     <header className="header bg-amber-300 w-full flex justify-center h-[70px] max-[480px]:h-full">
