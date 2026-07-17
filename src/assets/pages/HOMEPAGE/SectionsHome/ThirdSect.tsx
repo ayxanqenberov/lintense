@@ -5,7 +5,7 @@ import PlusAccnt from "../../ADS/PlusAccnt";
 const ThirdSect = () => {
   return (
     <section className="thirdSect bg-gradient-to-b from-black via-[#1a1a00] to-[#FFE400] flex justify-center items-center h-[400px]">
-      <div className="text-white flex flex-col gap-4 items-center text-center w-[40%]">
+      <div className="text-white flex flex-col gap-4 items-center text-center w-[40%] max-[676px]:w-full">
         <h2 className="text-[35px] font-bold">
           Experienced Drivers & Quality Fleet
         </h2>

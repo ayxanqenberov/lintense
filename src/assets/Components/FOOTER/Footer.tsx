@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white flex flex-col gap-3">
       <div className="upFooter w-full pt-5 flex items-center justify-center">
-        <nav className="flex w-[73.3%] justify-between">
+        <nav className="flex w-[73.3%] max-[640px]:w-full max-[470px]:flex-col max-[470px]:gap-2 max-[470px]:text-center justify-between">
           <ul>
             <h2 className="text-[18px] font-semibold">About us</h2>
             <li>
@@ -92,7 +92,7 @@ const Footer = () => {
               <h2 className="text-[18px] font-semibold">
                 Download Lintense mobile app
               </h2>
-              <div className="flex gap-5">
+              <div className="flex max-[350px]:flex-col gap-5">
                 <li className="flex duration-200 bg-[#2C2F3A] hover:bg-[#242529] cursor-pointer px-4 py-2 rounded-lg items-center gap-1">
                   <FaApple className="text-3xl text-[#FFE400]" />
                   <p className="flex flex-col items-center">

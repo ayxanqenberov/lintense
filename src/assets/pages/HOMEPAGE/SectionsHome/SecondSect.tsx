@@ -6,7 +6,7 @@ import More1 from "../../../Components/Buttons/More1bttn/More1";
 const SecondSect = () => {
   return (
     <section className="w-full flex items-center justify-center">
-      <div className="w-[73.5%] h-[60rem] flex flex-col items-center justify-center py-8">
+      <div className="w-[73.5%] h-[60rem] max-[676px]:h-full flex flex-col items-center justify-center py-8">
         <span className="text-center text-black w-full text-[40px] font-medium mb-8">
           Our Products and Solutions are for You
         </span>
@@ -128,9 +128,17 @@ const SecondSect = () => {
             </div>
           </div>
           <div
-            className="h-[300px] bg-cover bg-center"
+            className="h-[300px] flex flex-col items-start justify-end bg-cover bg-center"
             style={{ backgroundImage: `url(${bgCargo})` }}
-          ></div>
+          >
+            
+            <div className="flex items-center w-full justify-around pb-[30px] mb-1">
+              <span className="text-white">
+                Take a look at our delivery solutions.
+              </span>
+              <More1 />
+            </div>
+          </div>
           <div
             style={{ backgroundImage: `url(${bgBox})` }}
             className="bg-[#FFFBDB] w-full flex bg-cover bg-center flex-col items-center justify-center p-4 h-[300px]"
@@ -245,8 +253,7 @@ const SecondSect = () => {
                 </svg>
               </div>
               <p className="text-[30px] text-white font-medium">
-              Solutions and
-              expertise
+                Solutions and expertise
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-white">
@@ -357,12 +364,14 @@ const SecondSect = () => {
                   ></path>
                 </svg>
               </div>
-              <span className="text-[30px] text-black font-medium">Freight transportation</span>
+              <span className="text-[30px] text-black font-medium">
+                Freight transportation
+              </span>
               <div className="flex items-center justify-between">
                 <span className="text-black">
                   Take a look at our delivery solutions.
                 </span>
-                <More1/>
+                <More1 />
               </div>
             </div>
           </div>

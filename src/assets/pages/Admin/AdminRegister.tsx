@@ -47,8 +47,6 @@ const AdminRegister = () => {
             Authorized personnel only.
           </p>
         </div>
-
-        {/* Form */}
         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
           <div>
             <label className="block mb-2 text-sm font-medium text-gray-700">

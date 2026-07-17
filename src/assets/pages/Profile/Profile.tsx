@@ -150,7 +150,7 @@ const Profile = () => {
           </div>
         </div>
       </section>
-      <section className="w-full mt-8">
+      <section className="w-full mt-8 max-[370px]:mt-2">
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-12 h-12 rounded-xl bg-yellow-100 flex items-center justify-center">
@@ -167,14 +167,14 @@ const Profile = () => {
             </div>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex h-full gap-4 max-[370px]:flex-col max-[370px]:gap-7">
             <input
               type="text"
               placeholder="Enter promo code..."
-              className="flex-1 h-12 px-4 rounded-xl border border-gray-300 outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition"
+              className="flex-1 h-12 max-[370px]:h-[30px] px-4 rounded-xl border border-gray-300 outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition"
             />
 
-            <button className="px-8 bg-[#FFE400] hover:bg-[#FFD700] rounded-xl font-semibold transition">
+            <button className="px-8 max-[370px]:px-2 bg-[#FFE400] max-[370px]:h-[45px] hover:bg-[#FFD700] rounded-xl font-semibold transition">
               Apply
             </button>
           </div>

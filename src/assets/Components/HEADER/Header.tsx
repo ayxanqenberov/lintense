@@ -20,9 +20,9 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="header bg-amber-300 w-full flex justify-center h-[70px]">
-      <div className="flex items-center justify-around w-[80%]">
-        <div className="flex gap-3 items-center">
+    <header className="header bg-amber-300 w-full flex justify-center h-[70px] max-[480px]:h-full">
+      <div className="flex items-center justify-around w-[80%] max-[400px]:w-full">
+        <div className="flex gap-3 items-center max-[480px]:flex-col">
           <span
             className="bg-gradient-to-r logo from-[#030302] via-[#FFD54A] to-[#D4A017] bg-clip-text text-3xl font-extrabold tracking-[-0.04em] text-transparent"
             style={{
@@ -31,7 +31,7 @@ const Header = () => {
           >
             Lintense
           </span>
-          <span className=" w-[1px] bg-black h-[30px]"></span>
+          <span className=" w-[1px] bg-black h-[30px] max-[480px]:hidden"></span>
           <div className="flex bg-white rounded-[4px] items-center border-b ">
             <input
               className="outline-none  pl-1"

@@ -87,7 +87,6 @@ const Admin = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 gap-8">
-        {/* NEWS */}
         <div className="bg-white rounded-2xl shadow p-6">
           <div className="flex items-center gap-3 mb-6">
             <FaBullhorn className="text-yellow-500 text-2xl" />
@@ -137,8 +136,6 @@ const Admin = () => {
             ))}
           </div>
         </div>
-
-        {/* PROMO */}
         <div className="bg-white rounded-2xl shadow p-6">
           <div className="flex items-center gap-3 mb-6">
             <FaTicketAlt className="text-yellow-500 text-2xl" />
