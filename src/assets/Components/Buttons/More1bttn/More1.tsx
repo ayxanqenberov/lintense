@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { TbArrowBigRightLinesFilled } from 'react-icons/tb'
 
 const More1 = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ImArrowRight } from "react-icons/im";
 import "../../../App.css";
 import { CiSearch } from "react-icons/ci";

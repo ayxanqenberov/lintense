@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import FirstSect from "./SectionsHome/FirstSect";
 import Header from "../../Components/HEADER/Header";
 import SecondSect from "./SectionsHome/SecondSect";

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import bgCargo from "../../../images/cargo.jpg";
 import bgBox from "../../../images/sect2pict2.jpg";
 import More1 from "../../../Components/Buttons/More1bttn/More1";

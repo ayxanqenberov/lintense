@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { FaApple, FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";

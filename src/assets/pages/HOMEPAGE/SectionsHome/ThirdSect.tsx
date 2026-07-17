@@ -1,6 +1,5 @@
-import React from "react";
+// import React from "react";
 import "../../../../App.css";
-import PlusAccnt from "../../ADS/PlusAccnt";
 
 const ThirdSect = () => {
   return (

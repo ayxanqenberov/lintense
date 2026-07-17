@@ -1,7 +1,5 @@
-import React from "react";
+// import React from "react";
 import { FaApplePay, FaGooglePay, FaPaypal } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
-import { MdEmail } from "react-icons/md";
 
 const LintensePlus = () => {
   return (
