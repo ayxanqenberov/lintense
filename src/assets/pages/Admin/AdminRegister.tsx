@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { FaUserShield } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -10,27 +10,27 @@ const AdminRegister = () => {
     password: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  if (
-    form.name === import.meta.env.VITE_ADMIN_NAME &&
-    form.email === import.meta.env.VITE_ADMIN_EMAIL &&
-    form.password === import.meta.env.VITE_ADMIN_PASS
-  ) {
-    localStorage.setItem("admin", "true");
-    navigate("/admin-dashboard");
-  } else {
-    alert("Invalid admin credentials");
-  }
-};
+    if (
+      form.name === import.meta.env.VITE_ADMIN_NAME &&
+      form.email === import.meta.env.VITE_ADMIN_EMAIL &&
+      form.password === import.meta.env.VITE_ADMIN_PASS
+    ) {
+      localStorage.setItem("admin", "true");
+      navigate("/admin-dashboard");
+    } else {
+      alert("Invalid admin credentials");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 via-white to-yellow-50 flex items-center justify-center px-4">

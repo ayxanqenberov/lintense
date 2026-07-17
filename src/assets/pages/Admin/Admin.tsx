@@ -1,10 +1,23 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBullhorn, FaTicketAlt, FaTrash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
   const navigate = useNavigate();
 
+  interface News {
+    id: number;
+    title: string;
+    description: string;
+  }
+
+  interface Promo {
+    id: number;
+    code: string;
+    discount: string;
+    limit: string;
+    expire: string;
+  }
   useEffect(() => {
     const isAdmin = localStorage.getItem("admin");
 
@@ -12,9 +25,8 @@ const Admin = () => {
       navigate("/admin");
     }
   }, [navigate]);
-
-  const [news, setNews] = useState([]);
-  const [promos, setPromos] = useState([]);
+  const [news, setNews] = useState<News[]>([]);
+  const [promos, setPromos] = useState<Promo[]>([]);
 
   const [newsTitle, setNewsTitle] = useState("");
   const [newsDesc, setNewsDesc] = useState("");
@@ -40,7 +52,7 @@ const Admin = () => {
     setNewsDesc("");
   };
 
-  const deleteNews = (id) => {
+  const deleteNews = (id: number) => {
     setNews(news.filter((item) => item.id !== id));
   };
 
@@ -64,7 +76,7 @@ const Admin = () => {
     setExpire("");
   };
 
-  const deletePromo = (id) => {
+  const deletePromo = (id: number) => {
     setPromos(promos.filter((item) => item.id !== id));
   };
 
@@ -187,9 +199,7 @@ const Admin = () => {
                   <h3 className="font-bold">{item.code}</h3>
                   <p className="text-gray-500">{item.discount}% Discount</p>
                   <p className="text-gray-500">Limit: {item.limit}</p>
-                  <p className="text-gray-500">
-                    Expires: {item.expire}
-                  </p>
+                  <p className="text-gray-500">Expires: {item.expire}</p>
                 </div>
 
                 <button
